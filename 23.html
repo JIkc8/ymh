@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>happy birthday</title>
+<style>
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+  }
+
+.my-font {
+  font-family: "SimSun",SimSun, cursive;/*字体*/
+}
+.center-bold {
+  text-align: center; /* 文本居中 */
+  font-weight: bold; /* 文本粗体 */
+}
+.gradient-text {/*字体颜色渐变*/
+    font-size: 48px;
+    background: -webkit-linear-gradient(red, yellow);
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 50% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+ 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 平分两列 */
+    grid-gap: 100px; /* 格子间隔 */
+    padding: 100px; /* 容器内边距 */
+  }
+  
+.item {
+
+  }
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+ 
+</style>
+
+
+
+</head>
+<body>
+
+<div class="background">
+
+<h1 style="text-align: center;font-size: 80px;" class="gradient-text" >HAPPY BIRTHDAY</h1>
+
+<p style="text-align: center;color: purple;font-size: 40px;" class="center-bold"><span class="my-font">to Ye Menghan</p>
+
+<div class="container">
+  <div class="item"><img src="1.JPG" width="300" height="400" ></div>
+  <div class="item"><img src="2.JPG"  width="300" height="400"></div>
+  <div class="item"><img src="3.JPG" width="300" height="400" ></div>
+  <div class="item"><img src="4.JPG"  width="300" height="400"></div>
+</div>
+
+<div  class="center-container">
+<button id="myBtn" style="padding: 68px 100px; font-size: 30px;">点击获取《五三》</button>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <video width="100%" height="auto" controls>
+      <source src="copy_AACEC1FC-A674-47FF-80F1-EF4BDB2CFF60.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+ 
+<script>
+// 获取按钮和模态框
+var btn = document.getElementById("myBtn");
+var modal = document.getElementById("myModal");
+var span = document.getElementById("close");
+ 
+// 当按钮被点击时，显示模态框
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+ 
+// 当点击(X)关闭按钮或点击其他地方关闭模态框
+span.onclick = function() {
+  modal.style.display = "none";
+}
+ 
+// 当点击模态框外部关闭模态框
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</div>
+</body>
+</html>
